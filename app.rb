@@ -30,10 +30,9 @@ class App < Sinatra::Base
     @string = ''
     @string = @string + params[:word1] + ' ' + params[:word2] + ' ' + params[:word3] + ' ' + params[:word4] + ' ' + params[:word5] + '.'
     return @string
-  end
+  end 
   
   get '/:operation/:number1/:number2' do
-  
     case params[:operation].to_s
     when 'add'
       @number = params[:number1].to_i + params[:number2].to_i
@@ -48,4 +47,5 @@ class App < Sinatra::Base
     end
     return @number.to_s
   end
+  
 end
